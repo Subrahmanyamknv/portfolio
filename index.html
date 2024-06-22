@@ -1,0 +1,471 @@
+<html>
+<title> PORTOFOLIO WEBSITE </title>
+<head>
+<style>
+*{
+margin: 0;
+padding: 0;
+font-family: 'Poppins',san-serif;
+box-sizing: border-box;
+}
+html{
+scroll-behavior:smooth;
+}
+body{
+background:#080808;
+color:#fff;
+}
+#header{
+width: 100%;
+height: 100vh;
+background-position: center;
+}
+.container{
+padding: 10px 10%;
+}
+nav{
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-wrap: wrap
+}
+.text{
+color: #fff;
+width: 140px;
+}
+nav ul li{
+display: inline-block;
+list-style: none;
+margin:10px 20px;
+}
+nav ul li a{
+color: #fff;
+text-decoration:none;
+font-size:20px;
+position:relative;
+}
+nav ul li a::after{
+content:'';
+width:0;
+height
+: 3px;
+background:#00f;
+position:absolute;
+left:0;
+bottom:-6px;
+transition:0.5s;
+}
+nav ul li a:hover::after{
+width:100%;
+}
+.header-text{
+margin-top: 18%;
+}
+.header-text h1{
+font-size: 60px;
+margin-top: 200px;
+margin-left:410px;
+background: -webkit-linear-gradient(#ffffff, #000fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#about{
+padding:50px 20%;
+color:#ababab'
+}
+.row{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+}
+.img1{
+border:5px solid #Fff;
+border-radius:20px;
+height:80%;
+width:30%;
+margin-left: -10%;
+margin-top: 15%;
+}
+.about-col2{
+flex-basis:40%;
+margin-left:70%;
+margin-top:-40%;
+}
+.sub-title{
+color:ffd700;
+font-size: 50px;
+font-weight: 600;
+font-color:#fff;
+}
+.tab-titles{
+display: flex;
+margin: 20px 0 40px;
+}
+.tab-links{
+margin-right: 50px;
+font-size:18px;
+font-weight:500;
+cursor: pointer;
+position:relative;
+}
+.tab-links::after{
+content:"";
+width:0;
+height:3px;
+background:#00f;
+position:absolute;
+left:0;
+bottom:-8px;
+transition:0.5s;
+}
+.tab-links.active-link::after
+{
+width:50%;
+}
+.tab-contents ul li{
+list-style:none;
+margin:10px 0;
+}
+.tab-contents ul li span{
+color:#ffd700;
+font-size:14px;
+font-weight:500;
+}
+.tab-contents{
+display:none;
+}
+.tab-contents.active-tab{
+display:block;
+}
+/----------services----------/
+#services{
+margin-top:20%;
+padding: 30px 0px;
+}
+.services-list{
+display:grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+grid-gap:40px;
+margin-top: 50px;
+}
+.services-list div{
+background: #262626;
+padding: 40px;
+font-size: 13px;
+font-weight: 300;
+border-radius: 10px;
+transition: background 0.5s, transform 0.5s;
+}
+.services-list div i{
+font-size:50px;
+}
+.services-list div h2{
+font-size:30px;
+font-weight:500;
+margin-bottom:15px;
+}
+.services-list div a{
+text-decoration: none;
+color: #fff;
+font-size: 15px;
+margin-top: 20px;
+display: inline-block;
+}
+.service h2{
+color:#ffd700;
+}
+.service:hover{
+background: #00f;
+transform: translateY(-10px);
+}
+/---------portofolio-----/
+#portofolio{
+margin-top:20%;
+padding: 50px 0;
+}
+.work-list{
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+grid-gap:20px;
+margin-top: 50px;
+}
+.work{
+border-radius: 10px;
+position: relative;
+overflow: hidden;
+}
+.work img{
+
+width: 100%;
+border-radius: 10px;
+display: block;
+transition: transform 0.5s;
+}
+.layer{
+width:100%;
+height: 0;
+background: linear-gradient(rgba(0,0,0,0.6),#00f);
+border-radius: 10px;
+position: absolute;
+left: 0;
+bottom: 0;
+overflow: hidden;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+padding: 0 40px;
+text-align:center;
+font-size:14px;
+transition: height 0.5s;
+}
+.layer h3{
+font-weight: 500;
+margin-bottom: 20px;
+}
+.work:hover img{
+transform: scale(1.1);
+}
+.work:hover .layer{
+height: 100%;
+}
+.btn{
+display:block;
+margin: 50px auto;
+width: fit-content;
+border: 1px solid#00f;#00f;
+padding: 14px 50px;
+border-radius: 6px;
+text-decoration: none;
+color: #fff;
+transition: background 0.5s;
+}
+.btn:hover{
+background:#00f;
+}
+/-----contact----------/
+.contact-left{
+flex-basis:35%;
+}
+.contact-right{
+flex-basis: 60%;
+}
+.contact-left p{
+margin-top: 30px;
+}
+.row div a{
+text-decoration: none;
+color: #fff;
+font-size: 15px;
+margin-top: 20px;
+display: inline-block;
+transition: transform 0.5s;
+}
+.row div a:hover{
+color: #ff004f;
+transform: translateY(-5px);
+}
+.btn.btn2{
+display:inline-block;
+background:#00f; 
+}
+.contact-right form{
+width:100%;
+}
+form input, form textarea{
+width: 100%;
+border: 0;
+outline: none;
+background: #262626;
+padding: 15px;
+margin: 15px 0;
+color: #fff;
+font-size: 18px;
+border-radius: 6px;
+}
+form .btn2{
+padding: 14px 60px;
+font-size: 18px;
+margin-top: 20px;
+cursor: pointer;
+}
+.copyright{
+width: 100%;
+text-align: center;
+padding: 25px 0;
+background: #262626;
+font-weight: 300;
+margin-top: 25px;
+}
+#msg{
+color:#61b752;
+margin-top:-40px;
+display:block;
+}
+/-------------css for responsive--------/
+</style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+	<div class="container">
+		<nav>
+			<ul>
+			     <li><a href="#header">Home</a></li>
+			     <li><a href="#about">About</a></li>
+			     <li><a href="#services">Skills</a></li>
+			     <li><a href="#portofolio">Projects</a></li>
+			     <li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="header-text">
+				<h1> Hi, I'm K.N.V.Subrahmanyam </h1>
+	</div>
+</div>
+<div id="about">
+	<div class="container">
+		<div class="row>
+			<div class="about-col1">
+				<img class="img1" src="D:\WhatsApp Image 2024-06-22 at 19.43.31_f6277407.jpg"  >
+
+			</div>
+			<div class="about-col2">
+				<h2>About Me</h2>
+				<div class="tab-titles">
+					<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+					<p class="tab-links" onclick="opentab('experience')">Education</p>
+				</div>
+				<div class="tab-contents active-tab" id="skills">
+					<ul><li><span>Programming Languages :  </span> Python, Java, HTML, Javascript</li>
+					<li><span>Database Skills :  </span>mysql</li></ul>
+				</div>
+				<div class="tab-contents" id="experience">
+					<ul><li><span>2021-2025</span><br>Pursuing BTech CSE<br>NRI Institute Of Technology</li>
+					<li><span>2020-2021</span><br>Intermediate<br>Sri Chaitanya jr.College</li></ul>
+				</div>
+
+
+
+			</div>
+		</div>		
+	</div>
+</div>	
+<!---------------services------------>
+<div id="services">
+	<div class="container"><br><br>
+		<h1 class="sub-title">My Skills</h1>
+		<div class="services-list">
+			<div class="service">
+				<h2>Programming Languages</h2>
+				<p>Pyhton, Java, Html</p>
+				<a href="#">learn more</a>
+			</div>
+			<div class="service">
+				<h2>Certifications</h2>
+				<p>Python Basic Hackerrank<br>ML using Python<br>NPTEL course “The joy of computing using Python”.​<br>
+
+AI For Everyone from DeepLearning.AI.​<br>
+
+Data Analysis with Python from IBM.​<br>
+
+Data Science course from Cisco.​<br>
+
+Databases and SQL for Data Science with Python.​<br>
+
+Prompt Engineering Course on Cognitive Class.</p>
+				<a href="#">learn more</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!----------------portofolio------- -->
+<div id="portofolio">
+	<div class="container">
+		<h1 class="sub-title">Projects</h1>
+		<div class="work-list">
+			<div class="work">
+				<img src="D:\pro_output1.png">
+				<div class="layer">
+<h3>TO Do list</h3>
+					<p>I have done a TO Do list project.
+				</div>
+			</div>
+			<div class="work">
+				<img src="D:\pro2_output.png">				
+				<div class="layer">
+					<h3>Restaurant Menu</h3>
+					<p> I have designed a Restaurant Menu </p>
+				</div>
+			</div>
+
+
+		</div>
+
+	</div>
+</div>
+<!----------contact---------->
+<div id="contact">
+	<div class="container">
+		<div class="row">
+			<div class="contact-left">
+				<h1 class="sub-title">Contact</h1><br>
+				<p>knvsubrahmanyam@gmail.com</p>
+				<p>9392794254</p>
+				
+				<a href="https://www.linkedin.com/in/subrahmanyam-k-n-v?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a><br>
+			
+
+			<a href="https://tinyurl.com/399m5yd4" download class="btn btn2">Download Resume</a></div>
+			<div class="contact-right">
+				<form name="submit-to-google-sheet">
+					<input type="text" name="Name" placeholder="Your Name" required>
+					<input type="text" name="Email" placeholder="Your Email" required>
+					<textarea name="Message" rows="6" placeholder="Message"></textarea>
+					<button type="submit" class="btn btn2">Submit</button>
+				</form>
+				<span id="msg"></span>
+			</div>
+		</div>
+
+	</div>
+	<div class="copyright">
+		<p>by Subrahmanyam</p>
+	</div>
+</div>
+		
+			
+<script>
+var tablinks=document.getElementsByClassName("tab-links");
+var tabcontents=document.getElementsByClassName("tab-contents");
+function opentab(tabname){
+	for(tablink of tablinks){
+		tablink.classList.remove("active-link");
+	}
+	for(tabcontent of tabcontents){
+		tabcontent.classList.remove("active-tab");
+	}
+	event.currentTarget.classList.add("active-link");
+	document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzkYu5A1Ho1rsCorS3wS1KAwSZYgUK1sLk5cf48N8zHcLi65ttK6uEfKZ3QbR2Whcov/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg=document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+		msg.innerHTML="Message Sent Succesfully!"
+		setTimeout(function(){
+			msg.innerHTML=""
+		},5000)
+		form.reset()
+	})
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>	
+</body>
+</html>
