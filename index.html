@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
 <title> PORTOFOLIO WEBSITE </title>
 <head>
 <style>
@@ -469,3 +469,314 @@ function opentab(tabname){
 </script>	
 </body>
 </html>
+ -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KNV Subrahmanyam | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background: #0e0e0e;
+      color: #fff;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      position: relative;
+      transition: color 0.3s;
+    }
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #00f;
+      left: 0;
+      bottom: -5px;
+      transition: 0.4s;
+    }
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+    .header-text {
+      text-align: center;
+      margin-top: 20vh;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    .header-text h1 {
+      font-size: 60px;
+      background: linear-gradient(to right, #ffffff, #00f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: slideDown 1s ease;
+    }
+    section {
+      padding: 100px 10% 60px;
+    }
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+      animation: fadeInUp 1s ease;
+    }
+    .about img {
+      width: 250px;
+      border-radius: 20px;
+      border: 5px solid #fff;
+      transition: transform 0.4s;
+    }
+    .about img:hover {
+      transform: scale(1.05);
+    }
+    .about-content {
+      max-width: 600px;
+    }
+    .sub-title {
+      font-size: 40px;
+      color: #ffd700;
+      margin-bottom: 20px;
+    }
+    .tab-links {
+      cursor: pointer;
+      margin-right: 20px;
+      position: relative;
+      font-weight: 500;
+      display: inline-block;
+    }
+    .tab-links::after {
+      content: '';
+      width: 0;
+      height: 2px;
+      background: #00f;
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      transition: 0.4s;
+    }
+    .tab-links.active::after {
+      width: 50%;
+    }
+    .tab-content {
+      display: none;
+      margin-top: 20px;
+      animation: fadeIn 0.5s ease;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .card {
+      background: #1a1a1a;
+      padding: 25px;
+      border-radius: 12px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 255, 0.3);
+    }
+    .contact form input,
+    .contact form textarea {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+      background: #262626;
+      color: #fff;
+    }
+    .btn {
+      display: inline-block;
+      background: #00f;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .btn:hover {
+      background: #0044ff;
+      transform: scale(1.05);
+    }
+    .btn + .btn {
+      margin-top: 10px;
+    }
+    .footer {
+      background: #111;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h2>KNV Subrahmanyam</h2>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="header-text">
+    <h1>Hi, I'm K.N.V. Subrahmanyam</h1>
+    <p>Aspiring Software Engineer | Java | Python | JavaScript</p>
+  </div>
+
+  <section id="about">
+    <div class="about">
+      <img src="your-photo.jpg" alt="Profile Photo">
+      <div class="about-content">
+        <h2 class="sub-title">About Me</h2>
+        <div>
+          <span class="tab-links active" onclick="openTab(event, 'skills')">Skills</span>
+          <span class="tab-links" onclick="openTab(event, 'education')">Education</span>
+        </div>
+        <div id="skills" class="tab-content active">
+          <p><strong>Languages:</strong> Python, Java, HTML, JavaScript</p>
+          <p><strong>Databases:</strong> MySQL</p>
+        </div>
+        <div id="education" class="tab-content">
+          <p>2021-2025: B.Tech in CSE, NRI Institute of Technology</p>
+          <p>2020-2021: Intermediate-MPC, Sri Chaitanya Jr. College</p>
+          <p>2018-2019: SSC, Bhashyam High School</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="services">
+    <h2 class="sub-title">My Skills</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Programming</h3>
+        <p>Python, Java, HTML, JavaScript</p>
+      </div>
+      <div class="card">
+        <h3>Certifications</h3>
+        <p>Hackerrank Python, IBM Data Analysis, NPTEL, AI For Everyone, and more.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2 class="sub-title">Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>To-Do List App</h3>
+        <p>A simple task management app using HTML, CSS, and JS.</p>
+      </div>
+      <div class="card">
+        <h3>Restaurant Menu</h3>
+        <p>Designed a digital menu layout using front-end technologies.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="sub-title">Contact</h2>
+    <p>Email: knvsubrahmanyam@gmail.com</p>
+    <p>Phone: 9392794254</p>
+    <p><a href="https://www.linkedin.com/in/subrahmanyam-k-n-v" class="btn">LinkedIn</a></p>
+    <p><a href="https://drive.google.com/file/d/1Ea2HwNtgvPPuuR7pK6QLf-hWmOuzFjJc/view?usp=sharing" class="btn" download>Download Resume</a></p>
+    <form name="submit-to-google-sheet">
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Your Email" required>
+      <textarea name="Message" rows="5" placeholder="Message"></textarea>
+     <center> <button type="submit" class="btn">Submit</button></center>
+      <span id="msg"></span>
+    </form>
+  </section>
+
+  <div class="footer">
+    <p>&copy; 2025 KNV Subrahmanyam</p>
+  </div>
+
+  <script>
+    function openTab(evt, tabId) {
+      const contents = document.querySelectorAll('.tab-content');
+      const links = document.querySelectorAll('.tab-links');
+      contents.forEach(content => content.classList.remove('active'));
+      links.forEach(link => link.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      evt.currentTarget.classList.add('active');
+    }
+
+    const scriptURL = 'https://script.google.com/macros/s/YOUR-SCRIPT-ID-HERE/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById("msg");
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          msg.innerHTML = "Message sent successfully!";
+          setTimeout(() => msg.innerHTML = "", 5000);
+          form.reset();
+        })
+        .catch(error => console.error('Error!', error.message));
+    });
+  </script>
+</body>
+</html>
+
+
+ 
