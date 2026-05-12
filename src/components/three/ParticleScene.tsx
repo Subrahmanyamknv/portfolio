@@ -5,24 +5,35 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 import * as THREE from "three";
 
+function generateCloudPositions(count: number) {
+  const pos = new Float32Array(count * 3);
+  for (let i = 0; i < count; i++) {
+    const theta = Math.random() * Math.PI * 2;
+    const phi = Math.acos(2 * Math.random() - 1);
+    const r = 1.5 + Math.random() * 0.5;
+
+    pos[i * 3] = r * Math.sin(phi) * Math.cos(theta);
+    pos[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+    pos[i * 3 + 2] = r * Math.cos(phi);
+  }
+  return pos;
+}
+
+function generateSecondaryPositions(count: number) {
+  const pos = new Float32Array(count * 3);
+  for (let i = 0; i < count; i++) {
+    pos[i * 3] = (Math.random() - 0.5) * 4;
+    pos[i * 3 + 1] = (Math.random() - 0.5) * 4;
+    pos[i * 3 + 2] = (Math.random() - 0.5) * 4;
+  }
+  return pos;
+}
+
 function ParticleCloud() {
   const ref = useRef<THREE.Points>(null);
-
   const particleCount = 3000;
 
-  const positions = useMemo(() => {
-    const pos = new Float32Array(particleCount * 3);
-    for (let i = 0; i < particleCount; i++) {
-      const theta = Math.random() * Math.PI * 2;
-      const phi = Math.acos(2 * Math.random() - 1);
-      const r = 1.5 + Math.random() * 0.5;
-
-      pos[i * 3] = r * Math.sin(phi) * Math.cos(theta);
-      pos[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
-      pos[i * 3 + 2] = r * Math.cos(phi);
-    }
-    return pos;
-  }, []);
+  const positions = useMemo(() => generateCloudPositions(particleCount), []);
 
   useFrame((state) => {
     if (!ref.current) return;
@@ -48,16 +59,7 @@ function ParticleCloud() {
 
 function SecondaryParticles() {
   const ref = useRef<THREE.Points>(null);
-
-  const positions = useMemo(() => {
-    const pos = new Float32Array(1500 * 3);
-    for (let i = 0; i < 1500; i++) {
-      pos[i * 3] = (Math.random() - 0.5) * 4;
-      pos[i * 3 + 1] = (Math.random() - 0.5) * 4;
-      pos[i * 3 + 2] = (Math.random() - 0.5) * 4;
-    }
-    return pos;
-  }, []);
+  const positions = useMemo(() => generateSecondaryPositions(1500), []);
 
   useFrame((state) => {
     if (!ref.current) return;

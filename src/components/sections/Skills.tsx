@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { skills, skillCategories } from "@/data/skills";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { FadeIn } from "@/components/motion/FadeIn";
-import { StaggerChildren, StaggerItem } from "@/components/motion/StaggerChildren";
+
 import type { Skill } from "@/types";
 
 export function Skills() {

@@ -26,7 +26,7 @@ export function AnimatedText({
   const Tag = tag;
 
   return (
-    <Tag ref={ref as any} className={className}>
+    <Tag ref={ref as React.RefObject<HTMLHeadingElement>} className={className}>
       <span className="sr-only">{text}</span>
       <span aria-hidden="true">
         {words.map((word, wordIndex) => (

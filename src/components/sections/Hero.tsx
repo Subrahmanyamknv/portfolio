@@ -15,6 +15,7 @@ export function Hero() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
     const interval = setInterval(() => {
       setRoleIndex((prev) => (prev + 1) % personalInfo.roles.length);

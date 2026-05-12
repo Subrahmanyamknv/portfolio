@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import { personalInfo } from "@/data/resume";
 import { getSocialIcon } from "@/components/icons/SocialIcons";
-import { Heart, ArrowUp } from "lucide-react";
+import { ArrowUp } from "lucide-react";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 
 export function Footer() {

@@ -3,7 +3,7 @@
 import { useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useUIStore } from "@/stores/uiStore";
-import { navigation } from "@/data/resume";
+
 import { personalInfo } from "@/data/resume";
 import {
   Search,
