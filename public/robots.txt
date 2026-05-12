@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://subrahmanyamknv.vercel.app/sitemap.xml
