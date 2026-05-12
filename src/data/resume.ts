@@ -20,8 +20,8 @@ My approach combines technical depth with creative vision, resulting in solution
   email: "knvsubrahmanyam@gmail.com",
   phone: "+91 9392794254",
   location: "India",
-  availability: "open-to-offers",
-  resumeUrl: "/portfolio/resume.pdf",
+
+  resumeUrl: "https://drive.google.com/uc?export=download&id=1qLnq3yGAGUmUi1UqBep3KFKM55j12-IZ",
   avatarUrl: "/portfolio/Teams_proffestional.jpg",
   yearsOfExperience: 1,
   projectsCompleted: 10,

@@ -16,7 +16,7 @@ export interface PersonalInfo {
   email: string;
   phone?: string;
   location: string;
-  availability: "available" | "busy" | "open-to-offers";
+
   resumeUrl: string;
   avatarUrl: string;
   socialLinks: SocialLink[];

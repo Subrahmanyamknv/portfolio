@@ -30,18 +30,7 @@ export function Hero() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center pb-16 sm:pb-24 pt-8 sm:pt-0">
         {/* Availability Badge */}
-        <FadeIn delay={0.2}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-xs sm:text-sm mb-4 sm:mb-8">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
-            </span>
-            <span className="text-muted-foreground">
-              {personalInfo.availability === "available" ? "Available for work"
-                : personalInfo.availability === "open-to-offers" ? "Open to opportunities" : "Currently busy"}
-            </span>
-          </div>
-        </FadeIn>
+
 
         {/* Name */}
         <FadeIn delay={0.3}>
