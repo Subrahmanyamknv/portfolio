@@ -5,7 +5,7 @@ export function constructMetadata({
   title = SITE_CONFIG.title,
   description = SITE_CONFIG.description,
   image = SITE_CONFIG.ogImage,
-  icons = "/favicon.ico",
+  icons = "/portfolio/favicon.ico",
   noIndex = false,
 }: {
   title?: string;

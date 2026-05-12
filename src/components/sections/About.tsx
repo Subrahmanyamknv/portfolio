@@ -48,7 +48,7 @@ export function About() {
                 <div className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden glass-strong p-1 shrink-0 shadow-xl">
                   <div className="relative w-full h-full rounded-full overflow-hidden">
                     <Image
-                      src="/Teams_proffestional.jpg"
+                      src={personalInfo.avatarUrl}
                       alt={personalInfo.name}
                       fill
                       className="object-cover hover:scale-110 transition-transform duration-500"
