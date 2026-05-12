@@ -3,8 +3,8 @@ export const SITE_CONFIG = {
   title: "Full-Stack Engineer & AI Integration Specialist",
   description:
     "Professional portfolio of Subrahmanyam K. N. V., a Full-Stack Engineer specializing in modern web technologies and AI integrations.",
-  url: "https://subrahmanyamknv.vercel.app", // Placeholder for deployment
-  ogImage: "/og-image.png",
+  url: "https://Subrahmanyamknv.github.io/portfolio", // GitHub Pages URL
+  ogImage: "/portfolio/og-image.png",
   author: "Subrahmanyam K. N. V.",
   links: {
     github: "https://github.com/Subrahmanyamknv",
